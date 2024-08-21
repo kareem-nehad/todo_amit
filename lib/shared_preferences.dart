@@ -8,25 +8,20 @@ class Preferences {
     return _preferences;
   }
 
-  static void setMode(String mode) {
-    _preferences?.setString('mode', mode);
+  static void setList(List<String> tasks) {
+    _preferences?.setStringList('tasks', tasks);
   }
 
-  static String? getMode() {
-    return _preferences?.getString('mode');
+  static List<String>? getList() {
+    return _preferences?.getStringList('tasks');
   }
 
-
-  static void setCounter (int number) {
-    _preferences?.setInt('counter', number);
+  static void setFinishedTasks(List<String> finishedTasks) {
+    _preferences?.setStringList('finishedTasks', finishedTasks);
   }
 
-  static int? getCounter() {
-    return _preferences?.getInt('counter');
-  }
-
-  static void clearPreferences () {
-    _preferences?.clear();
+  static List<String>? getFinishedTasks() {
+    return _preferences?.getStringList('finishedTasks');
   }
 
 }
